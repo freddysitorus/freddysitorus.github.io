@@ -6,6 +6,7 @@
   <title>Freddy Sitorus</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: Inter, sans-serif;
@@ -57,18 +58,62 @@
 }
     
     /* MAIN CONTAINER */
-    .container {
-      background: #FFFFFF;
-        width: 100%;
-      overflow: hidden;
-       max-width: 1000px;
-  margin: 0 auto 40px;
-  padding: 40px;
+   .main-content {
+  width: 100%;
+  background: white;
+  padding: 60px 0;
+}
+
+.content-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.resume-section {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+  padding: 40px 0;
+  border-top: 1px solid #d8d8d8;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #6D765B;
+}
+
+.section-content {
   display: flex;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-    }
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.item-icon {
+  color: #6D765B;
+  font-size: 1.2rem;
+  margin-top: 4px;
+}
+
+.item-text h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #55624A;
+}
+
+.item-text p {
+  margin: 0;
+  color: #2f3a2f;
+  line-height: 1.6;
+}
 
     /* HERO (BIO + IMAGE) */
     .hero {
@@ -175,14 +220,35 @@
   <div class="container">
 
     <!-- Education -->
-    <section class="section" id="education">
-      <h2>Education</h2>
-      <p><strong>Master of Public Administration, Economic Development and Quantitative Analysis</strong></p>
-      <p>Columbia University, United States (2025)</p>
+    <section class="resume-section">
+  <div class="section-title">
+    <h2>Education</h2>
+  </div>
 
-      <p><strong>Bachelor of Economics, Finance Management</strong></p>
-      <p>Universitas Sumatera Utara, Indonesia (2015)</p>
-    </section>
+  <div class="section-content">
+    <div class="item">
+      <div class="item-icon">
+        <i class="fa-solid fa-graduation-cap"></i>
+      </div>
+
+      <div class="item-text">
+        <h3>Master of Public Administration, Economic Development and Quantitative Analysis</h3>
+        <p>Columbia University, United States (2025)</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-icon">
+        <i class="fa-solid fa-graduation-cap"></i>
+      </div>
+
+      <div class="item-text">
+        <h3>Bachelor of Economics, Finance Management</h3>
+        <p>Universitas Sumatera Utara, Indonesia (2015)</p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Research & Writing -->
     <section class="section" id="research">
