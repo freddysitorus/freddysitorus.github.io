@@ -34,19 +34,33 @@
 
     .navbar a {
       text-decoration: none;
-      color: #222;
+      color: #ffffff;
       font-weight: bold;
     }
 
     .navbar a:hover {
-      color: #7E9A73;
+      color: #A8B8A0;
     }
 
+    .hero {
+  background: #6D765B;
+  width: 100%;
+}
+    .hero-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+    
     /* MAIN CONTAINER */
     .container {
       max-width: 1000px;
       margin: 0 auto 40px;
-      background: #e7e7e7;
+      background: #DFE6DA;
       border-radius: 12px;
       box-shadow: 0 4px 14px rgba(0,0,0,0.08);
       overflow: hidden;
@@ -142,9 +156,8 @@
     </ul>
   </nav>
 
-  <div class="container">
-
-    <!-- ABOUT / BIO -->
+  <div class="hero">
+  <div class="hero-inner">
     <section class="hero" id="about">
       <img src="picture.jpg" alt="Profile photo">
 
@@ -154,7 +167,8 @@
           Hi, I’m Fred, a finance and development professional with research expertise in quantitative economic analysis, econometrics, and large-scale data management. My research focuses on the intersection of development economics, development finance, and public policy.
         </p>
       </div>
-    </section>
+  
+  <div class="container">
 
     <!-- Education -->
     <section class="section" id="education">
