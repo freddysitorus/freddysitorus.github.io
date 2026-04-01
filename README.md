@@ -59,7 +59,7 @@
       width: 180px;
       height: 180px;
       object-fit: cover;
-      border-radius: 50%;
+      border-radius: 0%;
       border: 4px solid #0a66c2;
     }
 
