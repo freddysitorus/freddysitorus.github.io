@@ -103,7 +103,7 @@
 
   <div class="container">
     <section class="hero" id="about">
-      <img src="profile.jpg" alt="Your profile photo" />
+      <img src="picture.jpg" alt="Your profile photo" />
       <div class="hero-text">
         <h1>Your Name</h1>
         <p>
