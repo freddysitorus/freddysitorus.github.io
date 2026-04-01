@@ -41,7 +41,7 @@
     .container {
       max-width: 1000px;
       margin: 40px auto;
-      background: white;
+      background: gray;
       border-radius: 12px;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
       overflow: hidden;
@@ -95,8 +95,8 @@
   <nav class="navbar">
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#research">Research</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -105,21 +105,32 @@
     <section class="hero" id="about">
       <img src="picture.jpg" alt="Your profile photo" />
       <div class="hero-text">
-        <h1>Your Name</h1>
+        <h1>Freddy Sitorus</h1>
         <p>
           Hi, I’m Fred, a finance and development professional with research expertise in quantitative economic analysis, econometrics, and large-scale data management. My research focuses on the intersection of development economics, development finance, and public policy.
         </p>
       </div>
     </section>
 
-    <section class="section" id="skills">
-      <h2>Skills</h2>
-      <p>HTML, CSS, JavaScript, Communication, Teamwork</p>
+    <section class="section" id="education">
+      <h2>Education</h2>
+          <p><strong>Master of Public Administration in Economic Development and Quantitative Analysis</strong></p>
+  <p>Columbia University, New York (2025)</p>
+
+  <p><strong>Bachelor of Economics, Financial Management</strong></p>
+  <p>Universitas Sumatera Utara, Indonesia (2015)</p>
     </section>
 
-    <section class="section" id="projects">
-      <h2>Projects</h2>
-      <p>Add your projects here.</p>
+    <section class="section" id="research">
+      <h2>Research & Writing </h2>
+      <p><strong>The Economic Impact of Village Funds and Pre-Existing BUMDes:
+A Difference-in-Differences Analysis with Evidence from East Java</strong></p>
+  <p>Examining how institutional capacity shapes the effectiveness of fiscal decentralization, using Indonesia’s Village Fund program and PODES data</p>
+  <a href="writing 1.pdf" download>Download here</a>
+  
+   <p><strong>Mobile Learning, Lasting Impact: from Digital Upskilling to Economic Empowermenr for Rural Women in Kenya: a Case Study of One Acre Fund</strong></p>
+  <p>Evaluating how digital tools can empower rural women’s economic resilience through microenterprise development, based on fieldwork in Kenya</p>
+<a href="writing 2.pdf" download>Download here</a>
     </section>
 
     <section class="section" id="contact">
