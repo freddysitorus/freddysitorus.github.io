@@ -42,13 +42,9 @@
 <body>
   <div class="container">
     <section class="bio">
-      <h1>Your Name</h1>
+      <h1>Fred Sitorus</h1>
       <p>
-        Hi, I’m <span class="highlight">Your Name</span>, a motivated
-        professional/student with an interest in web development,
-        problem-solving, and building useful digital experiences.
-        I enjoy learning new skills, working on practical projects,
-        and growing my career in technology.
+        Hi, I’m <span class="highlight">Freddy Sitorus</span>, a finance and development professional with expertise in quantitative economic analysis, econometrics, and large-scale data management. My research focuses on the intersection of development economics, development finance, and public policy.
       </p>
     </section>
   </div>
