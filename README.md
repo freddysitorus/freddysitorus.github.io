@@ -41,7 +41,7 @@
     .container {
       max-width: 1000px;
       margin: 40px auto;
-      background: gray;
+      background: #f0f0f0;
       border-radius: 12px;
       box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
       overflow: hidden;
@@ -57,10 +57,10 @@
 
     .hero img {
       width: 180px;
-      height: 180px;
+      height: 250px;
       object-fit: cover;
       border-radius: 0%;
-      border: 4px solid #0a66c2;
+      border: 1px solid #48494B;
     }
 
     .hero-text {
