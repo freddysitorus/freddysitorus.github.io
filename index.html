@@ -237,6 +237,30 @@
   color: #2f3a2f;
   line-height: 1.6;
 }
+    .edu-header {
+  display: flex;
+  align-items: flex-start; /* aligns icon with top of text */
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.edu-header i {
+  font-size: 20px;
+  margin-top: 5px; /* slight tweak for vertical alignment */
+  color: #0b2d21;
+}
+
+.edu-item h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
+
+.edu-item p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #0b2d21;
+}
     /* FLOATING BUTTON */
     .floating-btn {
       position: fixed;
@@ -325,22 +349,20 @@
   </div>
 
   <div class="education-items">
-    <div class="edu-item">
-      <div class="edu-icon">
-        <i class="fa-solid fa-graduation-cap"></i>
-      </div>
-      <h3>Master of Public Administration, Economic Development and Quantitative Analysis</h3>
-      <p>Columbia University, United States (2025)</p>
-    </div>
-
-    <div class="edu-item">
-      <div class="edu-icon">
-        <i class="fa-solid fa-graduation-cap"></i>
-      </div>
-      <h3>Bachelor of Economics, Finance Management</h3>
-      <p>Universitas Sumatera Utara, Indonesia (2015)</p>
-    </div>
+  <div class="edu-item">
+  <div class="edu-header">
+    <i class="fa-solid fa-graduation-cap"></i>
+    <h3>Master of Public Administration, Economic Development and Quantitative Analysis</h3>
   </div>
+  <p>Columbia University, United States (2025)</p>
+</div>
+
+<div class="edu-item">
+  <div class="edu-header">
+    <i class="fa-solid fa-graduation-cap"></i>
+    <h3>Bachelor of Economics, Finance Management</h3>
+  </div>
+  <p>Universitas Sumatera Utara, Indonesia (2015)</p>
 </div>
     
         <!-- Experience -->
