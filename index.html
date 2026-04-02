@@ -153,6 +153,42 @@
 .edu-item {
   flex: 1; 
 }
+
+    /* experience */
+.company-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.company-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+
+  filter: invert(17%) sepia(20%) saturate(800%) hue-rotate(110deg) brightness(70%);
+}
+
+.item-subtext {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.role {
+  font-weight: 500;
+}
+
+.date {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.experience-block {
+  margin-bottom: 30px;
+}
+    
     
     .resume-section {
   display: grid;
@@ -288,8 +324,7 @@
     <h2>Education</h2>
     </div>
   <div class="section-content">
-<div class="education-items">
-  
+<div class="education-items"> 
   <div class="edu-item">
  <div class="item">
       <div class="item-icon">
@@ -299,7 +334,6 @@
         <h3>Master of Public Administration, Economic Development and Quantitative Analysis</h3>
   <p>Columbia University, United States (2025)</p>
       </div>
-
   <div class="edu-item">
  <div class="item">
       <div class="item-icon">
@@ -314,44 +348,74 @@
 </section>
 
         <!-- Experience -->
-    <section class="section" id="experience">
-    <div class="resume-section">
+
+   <section class="section" id="experience">
+  <div class="resume-section">
+
     <div class="section-title">
-    <h2>Professional Experience</h2>
+      <h2>Professional Experience</h2>
     </div>
 
-  <div class="section-content">
-      <div class="item-text">
-        <h3>Telkom Indonesia</h3>
-        <div class="item-subtext">
-  <span class="role">Lead of Finance</span>
-  <span class="date">2020-2023</span>
-              </p>
-           <div class="item-subtext">
-  <span class="role">Lead of Corporate Social Responsibility</span>
-  <span class="date">2020-2023</span>
-                 </p>
-        <div class="item-subtext">
-  <span class="role">Head of Branch</span>
-  <span class="date">2020-2020</span>
-              </p>
-        <div class="item-subtext">
-  <span class="role">Strategic Partnership Officer</span>
-  <span class="date">2017-2020</span>
-        </p>
-        <h3>Columbia University</h3>
-        <div class="item-subtext">
-  <span class="role">Teaching Assistant for Microeconomics and Macroeconomics Analysis Courses</span>
-  <span class="date">2023-2024</span>
-    </p>
     <div class="section-content">
-      <div class="item-text">
-        <h3>United Nations - Executive Office of the Secretariat General</h3>
-     <div class="item-subtext">
-  <span class="role">Finance and Economic Portofolio Intern</span>
-  <span class="date">2024</span>
+
+      <!-- TELKOM -->
+      <div class="experience-block">
+        <div class="company-header">
+          <img src="telkom.png" class="company-logo">
+          <h3>Telkom Indonesia</h3>
+        </div>
+
+        <div class="item-subtext">
+          <span class="role">Lead of Finance</span>
+          <span class="date">2020–2023</span>
+        </div>
+
+        <div class="item-subtext">
+          <span class="role">Lead of Corporate Social Responsibility</span>
+          <span class="date">2020–2023</span>
+        </div>
+
+        <div class="item-subtext">
+          <span class="role">Head of Branch</span>
+          <span class="date">2020</span>
+        </div>
+
+        <div class="item-subtext">
+          <span class="role">Strategic Partnership Officer</span>
+          <span class="date">2017–2020</span>
+        </div>
+      </div>
+    </p>
+      <!-- COLUMBIA -->
+      <div class="experience-block">
+        <div class="company-header">
+          <img src="columbia.png" class="company-logo">
+          <h3>Columbia University</h3>
+        </div>
+
+        <div class="item-subtext">
+          <span class="role">Teaching Assistant (Micro & Macro Analysis)</span>
+          <span class="date">2023–2024</span>
+        </div>
+      </div>
+    </p>
+      <!-- UN -->
+      <div class="experience-block">
+        <div class="company-header">
+          <img src="un.png" class="company-logo">
+          <h3>United Nations</h3>
+        </div>
+
+        <div class="item-subtext">
+          <span class="role">Finance and Economic Portfolio Intern</span>
+          <span class="date">2024</span>
+        </div>
+      </div>
+
     </div>
+  </div>
 </section>
+
     
     <!-- Research & Writing -->
  <section class="section" id="writing">
