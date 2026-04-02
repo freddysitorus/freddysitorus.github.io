@@ -142,7 +142,8 @@
   font-size: 2rem;
   color: #6D765B;
 }
-.resume-section {
+
+  .resume-section {
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 40px;
@@ -150,8 +151,11 @@
   border-top: 1px solid #d8d8d8;
 }
 
+.section-title {
+  text-align: right;
+}
+
 .section-title h2 {
-  margin: 40px auto;
   font-size: 2rem;
   color: #6D765B;
 }
@@ -281,12 +285,10 @@
 
     <!-- Education -->
     <section class="section" id="education">
-  <div class="content-container">
-
-    <!-- EDU LEFT  --> 
-  <div class="content-left h1">
+    <div class="resume-section">
+    <div class="section-title">
     <h2>Education</h2>
-  </div>
+    </div>
 
   <div class="section-content">
     <div class="item">
@@ -314,14 +316,12 @@
 </section>
 
         <!-- Experience -->
-  <section class="section" id="experience">
-  <div class="content-container">
-
-    <!-- EXP LEFT  --> 
-  <div class="content-left h1">
+    <section class="section" id="experience">
+    <div class="resume-section">
+    <div class="section-title">
     <h2>Professional
-    Experiences</h2>
-  </div>
+      <p>Experience</h2>
+    </div>
 
   <div class="section-content">
       <div class="item-text">
