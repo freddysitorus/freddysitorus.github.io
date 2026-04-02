@@ -428,10 +428,34 @@ a:hover {
       transform: scale(1.1) translateY(-2px);
       box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     }
-    .contact-details p {
-    font-size: 1.5rem;
-    line-height: 1.5;
-  }
+   /* CONTACT */
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-icon {
+  font-size: 1.1rem;
+  color: #18392b;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.contact-details p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #18392b;
+}
   </style>
 </head>
 
@@ -640,27 +664,31 @@ a:hover {
         </div>
     </section>
 
-    <!-- CONTACT -->
+ <!-- CONTACT -->
 <section class="section" id="contact">
   <div class="content-container">
     <div class="content-left">
       <h1>Contact Me</h1>
     </div>
 
-    <div class="content-right">
+    <div class="content-right contact-list">
       <div class="contact-item">
-        <div class="logo">
+        <div class="contact-icon">
           <i class="fa-solid fa-envelope"></i>
+        </div>
         <div class="contact-details">
           <p>fs2826@columbia.edu</p>
         </div>
+      </div>
+
       <div class="contact-item">
-        <div class="logo">
+        <div class="contact-icon">
           <i class="fa-solid fa-location-dot"></i>
+        </div>
         <div class="contact-details">
           <p>New York, USA</p>
+        </div>
       </div>
-    </div>
     </div>
   </div>
 </section>
