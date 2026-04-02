@@ -119,8 +119,9 @@
 .content-container {
   display: flex;
   align-items: flex-start;
-  gap: 50px;
-  max-width: 1000px;
+  gap: 40px;
+  max-width: 1200px;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -131,7 +132,7 @@
 .content-right {
   flex: 1;
 }
-
+    /* Education */
 .education-grid {
   display: grid;
   grid-template-columns: 40px 1fr 40px 1fr;
@@ -175,60 +176,28 @@
     }
     
     /* experience */
-.exp-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.exp-left {
-  text-align: center;
-}
-
-.exp-logo {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  margin-bottom: 10px;
-}
-
-.exp-right {
-  max-width: 800px;
-}
-
-.hero-right p {
-  margin-bottom: 16px;
-  line-height: 1.6;
-  font-size: 1.2rem;
-  color: #333;
-}
-
-
-    
-    .resume-section {
+.experience-grid {
   display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 40px;
-  padding: 40px 0;
-  border-top: 1px solid #d8d8d8;
+  grid-template-columns: 40px 3fr;
+  column-gap: 18px;
+  align-items: start;
 }
 
-.section-title {
-  text-align: right;
+.exp-details {
+  text-align: left;
 }
 
-.section-title h2 {
-  font-size: 2rem;
-  color: #6D765B;
+.exp-details h3,
+.exp-details p {
+  margin: 0 0 8px 0;
 }
 
-.section-content {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.exp-details h3 {
+  line-height: 1.15;
+}
+
+.exp-details p {
+  line-height: 1.2;
 }
 
 .item {
@@ -392,6 +361,42 @@
   </div>
 </section>
         <!-- Experience -->
+    <section class="section" id="experience">
+  <div class="content-container">
+    <div class="content-left">
+      <h1>Professional Experiences</h1>
+    </div>
+
+    <div class="content-right">
+      <div class="experience-grid">
+        <div class="logo">
+          <img src="telkom.JPG" class="company-logo">
+        </div>
+
+        <div class="exp-details">
+          <h3>Telkom Indonesia</h3>
+          <p>Lead of Finance (2020-2023)</p>
+          <p>Lead of Corporate Social Responsibility Program (2020-2023)</p>
+          <p>Head of Branch Area (2020)</p>
+          <p>Strategic Partnership Officer (2017-2020)</p>
+        </div>
+        <div class="content-right">
+          <div class="experience-grid">
+            <div class="logo">
+              <img src="UN.JPG" class="company-logo">
+        </div>
+
+        <div class="exp-details">
+          <h3>United Nations - Executive Office of the Secretariat General </h3>
+          <p>Finance and Economic Portofolio Intern (2023)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
    <section class="section" id="experience">
   <div class="resume-section">
 
