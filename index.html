@@ -191,18 +191,11 @@
   color: #2f3a2f;
   line-height: 1.6;
 }
-
-    /* SECTIONS */
-    .section {
-      padding: 30px 40px;
-      border-top: 1px solid #eee;
-    }
-
-    .section h2 {
-      color: #6D765B;
-      margin-top: 0;
-    }
-
+.item-subtext {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
     /* FLOATING BUTTON */
     .floating-btn {
       position: fixed;
@@ -275,10 +268,6 @@
          <a href="resume.pdf" download class="btn">
         Download CV
       </a>
-    </section>
-      </p>
-    </div>
-
   </div>
 </section>
 
@@ -302,9 +291,10 @@
 
       <div class="item-text">
         <h3>Master of Public Administration, Economic Development and Quantitative Analysis</h3>
-        <p>Columbia University, United States (2025)</p>
-      </div>
-    </div>
+<div class="item-subtext">
+  <span class="role">Columbia University, United States</span>
+  <span class="date">2025</span>
+</div>
 
     <div class="item">
       <div class="item-icon">
@@ -313,9 +303,9 @@
 
       <div class="item-text">
         <h3>Bachelor of Economics, Finance Management</h3>
-        <p>Universitas Sumatera Utara, Indonesia (2015)</p>
-      </div>
-    </div>
+     <div class="item-subtext">
+  <span class="role">Universitas Sumatera Utara, Indonesia</span>
+  <span class="date">2015</span>
   </div>
 </section>
 
@@ -330,16 +320,30 @@
   <div class="section-content">
       <div class="item-text">
         <h3>Telkom Indonesia</h3>
-        <p>Assistant Manager of Community Development (Corporate Social Responsibility)	                	Jan 2021 – Aug 2023
-        Assistant Manager of Finance					              		              	              Nov 2020 – Aug 2023
-        Head of Business Unit Area				      	    	                 		 Jan 2020 – Oct 2020
-        Partnership & Retailer Officer				   		               		Apr 2017 – Dec 2019
+        <div class="item-subtext">
+  <span class="role">Lead of Finance</span>
+  <span class="date">2020-2023</span>
+           <div class="item-subtext">
+  <span class="role">Lead of Corporate Social Responsibility</span>
+  <span class="date">2020-2023</span>
+        <div class="item-subtext">
+  <span class="role">Head of Branch</span>
+  <span class="date">2020-2020</span>
+        <div class="item-subtext">
+  <span class="role">Strategic Partnership Officer</span>
+  <span class="date">2017-2020</span>
         </p>
         <h3>Columbia University</h3>
-        <p>Teaching Assistant  (Macroeconomics Analysis and Microeconomics Analysis course)		              Sep 2024 – May 2025</div>
+        <div class="item-subtext">
+  <span class="role">Teaching Assistant for Microeconomics and Macroeconomics Analysis Courses</span>
+  <span class="date">2023-2024</span>
     </p>
-    <h3>United Nations </h3>
-        <p>Finance and Economic Portfolio Intern	                		   			  	Jul 2024 – Dec 2024</div>
+    <div class="section-content">
+      <div class="item-text">
+        <h3>United Nations - Executive Office of the Secretariat General</h3>
+     <div class="item-subtext">
+  <span class="role">Finance and Economic Portofolio Intern</span>
+  <span class="date">2024</span>
     </div>
     
     <!-- Research & Writing -->
