@@ -117,7 +117,7 @@
     
     /* MAIN CONTAINER */
 .container {
-  max-width: 1250px;   /* controls total width */
+  max-width: 1000px;   /* controls total width */
   margin: 0 auto;      /* centers everything */
   padding: 0 17px;     /* adds space on left/right */
 }
@@ -126,13 +126,8 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 80px;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
-}
-    .main-content {
-  width: 100%;
-  background: white;
-  padding: 60px 0;
 }
 
 .content-left {
@@ -145,37 +140,37 @@
   color: #6D765B;
 }
 
-    /* education */
-.education {
-      max-width: 1200px;
-      margin: auto;
-    }
+  .content-right {
+  flex: 0 0 200px; /* fixed width for "Education" */
+  text-align: left;
+}
 
-    .education h2 {
+.content-right h1 {
+  font-size: 1.1rem;
+  color: #6D765B;
+}
+
+    /* education */
+.education-grid {
+  display: grid;
+  grid-template-columns: 60px 3fr 60px 3fr;
+  column-gap: 15px;
+}
+.education h2 {
       text-align: center;
       margin-bottom: 30px;
     }
 
- .education-grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr 2fr;
-  gap: 15px;
-}
-
 .education-grid > div:nth-child(4n + 1),
 .education-grid > div:nth-child(4n + 3) {
   text-align: right;   /* Columns 1 & 3 */
+   justify-self: end;
 }
 
 .education-grid > div:nth-child(4n + 2),
 .education-grid > div:nth-child(4n + 4) {
   text-align: left;    /* Columns 2 & 4 */
-}
-
-.education-grid > div:nth-child(-n+4) {
-  font-weight: bold;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 5px;
+   justify-self: start;
 }
     .item {
       padding: 15px;
@@ -391,25 +386,22 @@
     <h1>Education</h1>
   </div>
   
+   <div class="content-right"> 
   <div class="education-grid">
     <div class="item">
        <i class="fa-solid fa-graduation-cap"></i>
-    <div class="item">
-      <h3>Columbia University, United States</h3>
-  </div>
-      <p>MPA in Economic Development & Quantitative Analysis</p>
-  </div>
-      <p>2023–2025</p>
+    </div>
+      <h3>Master of Public Administration</h3>
+      <p>Economic Development & Quantitative Analysis</p>
+      <p>Columbia University, United States (2025)</p>
     </div>
     
     <div class="item">
       <i class="fa-solid fa-graduation-cap"></i>
     <div class="item">
-      <h3>Universitas Sumatera Utara, Indonesia</h3>
-  </div>
-      <p>BSc in Economics, Finance Management</p>
-  </div>
-      <p>2012-2015</p>
+      <h3>Bachelor of Economics</h3>
+      <p>Finance Management</p>
+      <p>Universitas Sumatera Utara, Indonesia (2015)</p>
     </div>
   </div>
 </section>
