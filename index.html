@@ -119,8 +119,8 @@
     
     /* MAIN CONTAINER */
 .content-container {
-  display: grid;
-  grid-template-columns: 220px 1fr;
+  display: flex;
+  align-items: flex-start;
   gap: 30px;
   max-width: 1300px;
   width: 90%;
@@ -269,85 +269,6 @@
 .section:last-of-type {
   border-bottom: none;
 }
-    /* ===== MOBILE FIX ===== */
-@media (max-width: 768px) {
-
-  /* NAVBAR */
-  .navbar {
-    padding: 15px 20px;
-  }
-
-  .navbar ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  /* HERO */
-  .hero-container {
-    flex-direction: column;
-    text-align: left;
-    gap: 30px;
-  }
-
-  .hero-right {
-    max-width: 100%;
-  }
-
-  .hero-right p {
-    font-size: 1rem;
-  }
-
-  /* CONTENT (this is BIG) */
-  .content-container {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .content-left {
-    flex: unset;
-    text-align: left;
-  }
-
-  .content-left h1 {
-    text-align: left;
-    font-size: 1.6rem;
-  }
-
-  /* EDUCATION */
-  .education-grid {
-    grid-template-columns: 1fr;
-    row-gap: 20px;
-  }
-
-  .logo {
-    justify-content: flex-start;
-  }
-
-  /* EXPERIENCE */
-  .experience-item {
-    grid-template-columns: 1fr;
-    row-gap: 10px;
-  }
-
-  /* TEXT */
-  p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  /* FLOATING BUTTON */
-  .floating-btn {
-    bottom: 12px;
-    right: 12px;
-    padding: 10px 14px;
-    font-size: 0.9rem;
-  }
-}
     a {
   color: inherit;         /* same color as text */
   text-decoration: none;  /* remove underline */
@@ -414,8 +335,10 @@ a:hover {
 
     <!-- HERO RIGHT -->
     <div class="hero-right">
-      <p>Hello! </p>
-     <p>I’m Fred, a finance and development professional from Indonesia. I have six years of experience in the private sector, holding senior leadership roles across corporate finance and development projects.
+      <p>
+        Hello! 
+         <p>
+      I’m Fred, a finance and development professional from Indonesia. I have six years of experience in the private sector, holding senior leadership roles across corporate finance and development projects.
       </p>
 
       <p>
@@ -436,7 +359,7 @@ a:hover {
       <!-- CONTENT -->
 
   <div class="container">
-  <div class="content-container">
+  <div class="content.container">
 
     <!-- Education -->
 <section class="section" id="education">
