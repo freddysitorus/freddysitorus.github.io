@@ -43,18 +43,56 @@
       color: #062B1C;
     }
 
-    .hero {
-  background: #DFE6DA;
-  width: 100%;
+ .hero {
+  padding: 80px 40px;
 }
-    .hero-inner {
-  max-width: 1000px;
-  margin: 0 auto 40px;
-  padding: 40px;
+
+.hero-container {
   display: flex;
   align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero-left {
+  text-align: center;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.hero-left h1 {
+  font-size: 1.8rem;
+  color: #18392b;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  font-size: 1.8rem;
+  color: #18392b;
+}
+
+.hero-right {
+  max-width: 500px;
+}
+
+.hero-right p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+  color: #333;
 }
     .social-icons {
   display: flex;
@@ -215,26 +253,43 @@
     </ul>
   </nav>
 
-  <div class="hero">
-  <div class="hero-inner">
-    <section class="hero" id="about">
-      <img src="picture.jpg" alt="Profile photo">
+<section class="hero">
+  <div class="hero-container">
 
-      <div class="hero-text">
-        <h1>Freddy Sitorus</h1>
-        <p>
-            <div class="social-icons">
-    <a href="#contact"><i class="fa-solid fa-envelope" style="color: rgb(10, 90, 37);"></i></a>
-    <a href="https://twitter.com/freddyhys" target="_blank"><i class="fa-brands fa-square-x-twitter" style="color: rgb(10, 90, 37);"></i></a>
-              <a href="https://linkedin.com/in/freddyhys" target="_blank"><i class="fa-brands fa-linkedin" style="color: rgb(10, 90, 37);"></i></a>
-  </div>
-         <p>
-          Hello, I’m Fred, a finance and development professional from Indonesia. I have six years of experience in the private sector, holding senior leadership roles across corporate finance and development projects in social enterprises. I also completed an internship with the United Nations in the finance and economics portfolio, where I contributed to development financing initiatives and sustainable development policy.
-I hold a Master’s degree in Development Economics and Quantitative Analysis, which has equipped me with expertise in quantitative economic analysis, econometrics, and large-scale data management. My research focuses on the intersection of development economics, development finance, and public policy. 
-           <p>
-           You can find my CV here.
-        </p>
+    <!-- LEFT SIDE -->
+    <div class="hero-left">
+      <img src="picture.jpg" alt="Freddy Sitorus" class="profile-pic">
+
+      <h1>Freddy Sitorus</h1>
+
+      <div class="social-icons">
+        <a href="#contact"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://twitter.com/freddyhys" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://linkedin.com/in/freddyhys" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
       </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="hero-right">
+      <p>
+        Hello, I’m Fred, a finance and development professional from Indonesia. I have six years of experience in the private sector, holding senior leadership roles across corporate finance and development projects in social enterprises.
+      </p>
+
+      <p>
+        I also completed an internship with the United Nations in the finance and economics portfolio, where I contributed to development financing initiatives and sustainable development policy.
+      </p>
+
+      <p>
+        I hold a Master’s degree in Development Economics and Quantitative Analysis, with expertise in econometrics and large-scale data management. My research focuses on development economics, finance, and public policy.
+      </p>
+
+      <p>
+        You can find my CV here.
+      </p>
+    </div>
+
+  </div>
+</section>
   
   <div class="container">
 
