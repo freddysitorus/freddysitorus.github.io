@@ -119,14 +119,19 @@
 .content-container {
   display: flex;
   align-items: flex-start;
-  gap: 40px;
-  max-width: 1200px;
-  width: 85%;
+  gap: 30px;
+  max-width: 1300px;
+  width: 90%;
   margin: 0 auto;
 }
 
 .content-left {
-  flex: 0 0 220px;
+  flex: 0 0 240px;
+}
+
+.content-left h1 {
+  margin: 0;
+  line-height: 1.1;
 }
 
 .content-right {
@@ -155,11 +160,15 @@
   margin: 0 0 8px 0;
 }
 
-.edu-details h3 {
+.edu-details h3,
+.exp-details h3 {
+  margin: 0 0 8px 0;
   line-height: 1.15;
 }
 
-.edu-details p {
+.edu-details p,
+.exp-details p {
+  margin: 0 0 6px 0;
   line-height: 1.2;
 }
     /* Responsive */
@@ -220,6 +229,16 @@
   color: #18392b;
   margin-bottom: 10px;
 }
+
+ .section {
+  padding: 50px 0;
+  border-bottom: 1px solid #bfc5bc;
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
     /* FLOATING BUTTON */
     .floating-btn {
       position: fixed;
