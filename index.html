@@ -2,84 +2,281 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Freddy Sitorus</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background-color: #f7f7f7;
+      margin: 0;
+      background: #ffffff;
+      color: #062B1C;
     }
 
-    nav {
-      background-color: #18392b;
-      padding: 18px 40px;
+    /* NAVBAR */
+    .navbar {
+      background: #18392B;
+      padding: 15px 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+    }
+
+    .navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      gap: 20px;
+       justify-content: flex-end;
     }
 
-    .logo {
-  color: white;
-  font-size: 1.3rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-
-    .nav-links a {
-      color: white;
+    .navbar a {
       text-decoration: none;
-      font-size: 1rem;
-      transition: opacity 0.2s ease;
+      color: #ffffff;
+      font-weight: bold;
     }
 
-    .nav-links a:hover {
-      opacity: 0.8;
+    .navbar a:hover {
+      color: #062B1C;
     }
 
     .hero {
-      padding: 80px 40px;
-      text-align: center;
+  background: #DFE6DA;
+  width: 100%;
+}
+    .hero-inner {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+    
+    /* MAIN CONTAINER */
+   .main-content {
+  width: 100%;
+  background: white;
+  padding: 60px 0;
+}
+
+.content-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.resume-section {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+  padding: 40px 0;
+  border-top: 1px solid #d8d8d8;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #6D765B;
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.item-icon {
+  color: #6D765B;
+  font-size: 1.2rem;
+  margin-top: 4px;
+}
+
+.item-text h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #55624A;
+}
+
+.item-text p {
+  margin: 0;
+  color: #2f3a2f;
+  line-height: 1.6;
+}
+
+    /* HERO (BIO + IMAGE) */
+    .hero {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      padding: 40px;
+      flex-wrap: wrap;
     }
 
-    .hero h1 {
+    .hero img {
+      width: 200px;
+      height: 250px;
+      border-radius: 0;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .hero-text h1 {
+      margin: 0 0 10px;
       font-size: 2.5rem;
-      color: #18392b;
-      margin-bottom: 16px;
     }
 
-    .hero p {
-      font-size: 1.1rem;
-      color: #444;
+    .hero-text p {
+      line-height: 1.7;
+      color: #DFEGDA;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 30px 40px;
+      border-top: 1px solid #eee;
+    }
+
+    .section h2 {
+      color: #6D765B;
+      margin-top: 0;
+    }
+
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #7E9A73;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: #004182;
+    }
+
+    /* FLOATING BUTTON */
+    .floating-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #7E9A73;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .floating-btn:hover {
+      transform: scale(1.1) translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     }
   </style>
 </head>
+
 <body>
-  <nav>
-    <div class="logo">My Website</div>
-    <ul class="nav-links">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#education">Education</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#research">Research</a></li>
+      <li><a href="#research">Research & Writing</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <section class="hero">
-    <h1>Welcome to My Website</h1>
-    <p>This is the starting point for my portfolio.</p>
-  </section>
+  <div class="hero">
+  <div class="hero-inner">
+    <section class="hero" id="about">
+      <img src="picture.jpg" alt="Profile photo">
+
+      <div class="hero-text">
+        <h1>Freddy Sitorus</h1>
+        <p>
+          Hi, I’m Fred, a finance and development professional with research expertise in quantitative economic analysis, econometrics, and large-scale data management. My research focuses on the intersection of development economics, development finance, and public policy.
+        </p>
+      </div>
+  
+  <div class="container">
+
+    <!-- Education -->
+    <section class="resume-section">
+  <div class="section-title">
+    <h2>Education</h2>
+  </div>
+
+  <div class="section-content">
+    <div class="item">
+      <div class="item-icon">
+        <i class="fa-solid fa-graduation-cap"></i>
+      </div>
+
+      <div class="item-text">
+        <h3>Master of Public Administration, Economic Development and Quantitative Analysis</h3>
+        <p>Columbia University, United States (2025)</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-icon">
+        <i class="fa-solid fa-graduation-cap"></i>
+      </div>
+
+      <div class="item-text">
+        <h3>Bachelor of Economics, Finance Management</h3>
+        <p>Universitas Sumatera Utara, Indonesia (2015)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Research & Writing -->
+    <section class="section" id="research">
+      <h2>Research & Writing</h2>
+      <p><strong>The Economic Impact of Village Funds and Pre-Existing BUMDes:
+</strong>A Difference-in-Differences Analysis with Evidence from East Java</p>
+      <p>Examining how institutional capacity shapes the effectiveness of fiscal decentralization, using Indonesia’s Village Fund program and one of Indonesia’s largest datasets, the Village Potential Survey (PODES)</p>
+
+      <p><strong>Mobile learning, Lasting Impact: from Digital Upskilling to Economic Empowerment for Rural Women in Kenya:</strong>a Case Study of One Acre Fund</p>
+      <p>AEvaluating how digital tools can empower rural women’s economic resilience through microenterprise development, based on fieldwork in Kenya</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <p>Email: fs2826@columbia.edu</p>
+
+      <a href="resume.pdf" download class="btn">
+        Download Resume
+      </a>
+    </section>
+
+  </div>
+
+  <!-- FLOATING BUTTON -->
+  <a href="resume.pdf" download class="floating-btn">
+    ⬇ Resume
+  </a>
+
 </body>
 </html>
