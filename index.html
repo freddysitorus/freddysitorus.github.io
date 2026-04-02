@@ -239,6 +239,15 @@
 .section:last-of-type {
   border-bottom: none;
 }
+    a {
+  color: inherit;         /* same color as text */
+  text-decoration: none;  /* remove underline */
+}
+
+a:hover {
+  color: #895129;
+       transform: translateY(-2px);
+    }
 
     /* FLOATING BUTTON */
     .floating-btn {
@@ -336,7 +345,11 @@
         <div class="edu-details">
           <h3>Master of Public Administration</h3>
           <p>Economic Development &amp; Quantitative Analysis</p>
-          <p>Columbia University, United States (2025)</p>
+          <p>
+            <a href="https://www.columbia.edu" target="_blank">
+              Columbia University
+            </a>, United States (2025)
+          </p>
         </div>
 
         <div class="logo">
@@ -346,7 +359,11 @@
         <div class="edu-details">
           <h3>Bachelor of Economics</h3>
           <p>Finance Management</p>
-          <p>Universitas Sumatera Utara, Indonesia (2015)</p>
+          <p>
+            <a href="https://usu.ac.id" target="_blank">
+              Universitas Sumatera Utara
+            </a>, Indonesia (2015)
+          </p>        
         </div>
       </div>
     </div>
