@@ -35,7 +35,11 @@
   align-items: center;
   flex-wrap: wrap;
 }
-
+.navbar ul li:not(:last-child)::after {
+  content: "|";
+  margin-left: 12px;
+  color: #ffffff;
+}
 .navbar a {
   text-decoration: none;
   color: #ffffff;
@@ -436,9 +440,9 @@ a:hover {
   <!-- NAVBAR -->
   <nav class="navbar">
     <ul>
-      <li><a href="#about">About  |</a></li>
-      <li><a href="#education">Education  |</a></li>
-      <li><a href="#experience">Experience  |</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#writing">Research</a></li>
     </ul>
   </nav>
