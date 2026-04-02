@@ -293,13 +293,14 @@
 }
 
 .research-right h1 {
-  margin: 0 0 8px 0;
+  margin: 0 0 2px 0;
+  font-size: 1.5rem;
   line-height: 1.7;
   color: #18392b;
 }
 
-. research-right p {
-  margin: 0 0 8px 0;
+.research-right p {
+  margin: 0 0 1px 0;
   font-size: 1.1rem;
   line-height: 1.7;
   color: #18392b;
@@ -312,8 +313,8 @@
       color: white;
       font-size: 0.85rem;
       text-decoration: none;
-      border-radius: 6px;
-      margin-top: 1px;
+      border-radius: 1px;
+      margin: 5px 0 1 0;
     }
 
     .btn-paper:hover {
@@ -354,27 +355,31 @@ a:hover {
   }
 
   .content-left h1 {
-    text-align: left;
+    text-align: center;
     font-size: 1.6rem;
   }
 
   /* STACK EDUCATION ITEMS VERTICALLY */
   .education-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    row-gap: 20px;
     gap: 20px;
   }
 
   /* EXPERIENCE STACK */
   .experience-item {
-    grid-template-columns: 1fr;
-    row-gap: 8px;
+    grid-template-columns: 36px 1fr;
+    column-gap: 10px;
+    row-gap: 0;
   }
-
+  .logo {
+    justify-content: flex-start;
+  }
   .exp-logo {
-    margin-bottom: 5px;
+    width: 28px;
+    height: 28px;
   }
-
   /* GENERAL TEXT SPACING */
   .content-right {
     width: 100%;
