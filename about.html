@@ -1,0 +1,617 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fred Sitorus</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #c48f29;
+      --black: #000000;
+      --white: #ffffff;
+      --gray: #cccdc6;
+      --card-bg: rgba(8, 8, 12, 0.55);
+      --card-border: rgba(255,255,255,0.08);
+      --shadow: 0 8px 40px rgba(0,0,0,0.5), 0 2px 8px rgba(0,0,0,0.3);
+      --gap: clamp(20px, 4vw, 60px);
+      --nav-height: 50px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--black);
+      min-height: 100vh;
+      background: #080808;
+      overflow-x: hidden;
+    }
+
+    /* ── BACKGROUND ── */
+    .bg-fixed {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background: url('background1.jpg') center/cover no-repeat;
+    }
+    .bg-fixed::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.55);
+    }
+
+    /* ── NAVBAR ── */
+    nav {
+     position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid transparent;
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+    nav.scrolled {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    
+    .nav-inner {
+      width: 95vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .nav-links {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+      margin-left: auto;
+    }
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--black);
+      text-decoration: none;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+      position: relative;
+      padding-bottom: 4px;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 2px;
+      background: var(--accent);
+      transition: width 0.25s ease;
+    }
+    .nav-links a.active {
+      font-weight: 500;
+    }
+    .nav-links a.active::after {
+      color: var(--accent);
+      width: 100%;
+    }
+    .nav-links a:hover { color: var(--black); }
+    .nav-links a:hover::after { width: 100%; }
+
+
+    /* ── PAGE WRAPPER ── */
+    .page {
+      position: relative;
+      z-index: 1;
+      padding-top: var(--nav-height);
+    }
+
+    /* ── HERO ── */
+   .hero {
+  position: relative;
+  min-height: calc(85svh - var(--nav-height));
+  overflow: visible;
+  max-width: 95vw;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: -12px 0 40px rgba(0,0,0,0.12), 12px 0 40px rgba(0,0,0,0.12);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-text {
+  padding: 60px var(--gap);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  animation: fadeLeft 0.8s ease both;
+}
+
+.hero-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 6vw, 8.5rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--black);
+  text-align: center;
+  margin-bottom: 16px;
+}
+.name-first {
+  color: var(--black);
+  font-weight: 400;
+}
+
+.name-last {
+  color: var(--accent);
+  font-weight: 800;
+}
+.hero-bio {
+  font-size: 1.3rem;
+  color: var(--black);
+  line-height: 1.8;
+  max-width: 80%;
+  margin-bottom: 30px;
+  margin: 30px auto 30px auto;
+  text-align: justify;
+}
+
+.hero-photo-fullscreen {
+  position: relative;
+  overflow: visible;
+  animation: fadeRight 1s ease 0.1s both;
+}
+
+.hero-photo-fullscreen img {
+  width: 75%;
+  height: auto;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  margin: auto;
+}
+  .hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1rem, 6vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--black);
+  text-align: center;
+  margin: 100px auto 30px auto;
+  font-weight: 500;
+}
+.hero-content {
+  font-size: 1.5rem;
+  color: var(--black);
+  line-height: 1.8;
+  max-width: 80%;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+hr {
+  border: none;
+  border-top: 2px solid var(--accent);
+  width: 10%; /* adjust length here */
+  margin: 10px auto;
+}
+
+    /*EDUCATION*/
+    .content-right {
+   margin: 0;
+  line-height: 1.1;
+}
+    .education-grid {
+  display: grid;
+  grid-template-columns: 40px 1fr 40px 1fr;
+  column-gap: 18px;
+  align-items: start;
+  max-width: 75%;
+      row-gap: 10px;
+  margin: 40px auto 40px auto ;
+}
+
+.edu-details {
+  text-align: left;
+  font-size: 1.2rem;
+  color: var(--black);
+  line-height: 1.5;
+  max-width: 80%;
+}
+    .edu-details span {
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .logo {
+  display: flex;
+      color: var(--accent);
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+    /* EXPERIENCES*/
+    .experience-item {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  column-gap: 10px;
+  align-items: start;
+  margin-bottom: 20px;
+  max-width: 75%;
+  margin: 40px auto 40px auto ;
+}
+
+.exp-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  color: var(--accent);
+  display: block;
+}
+
+.exp-details {
+  text-align: left;
+  font-size: 1.2rem;
+  color: var(--black);
+  line-height: 1.5;
+  max-width: 80%;
+}
+    .exp-details span {
+      font-weight: 600;
+    }
+
+    /* ── CONTACT ── */
+#contact {
+  position: relative;
+  z-index: 1;
+  width: 95vw;
+  margin: 0 auto;
+  padding: 60px var(--gap);
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.contact-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text align: right;
+}
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-left: 1px solid var(--accent);
+  padding-left: 40px;
+}
+
+.contact-email {
+  font-size: 1.2rem;
+  color: var(--black);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  transition: color 0.2s;
+}
+.contact-email:hover { color: var(--accent); }
+
+.contact-location {
+  font-size: 1.2rem;
+  color: var(--black);
+  letter-spacing: 0.1em;
+}
+
+.contact-socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.contact-socials a {
+  color: var(--black);
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+.contact-socials a:hover { color: var(--accent); }
+.contact-socials svg {
+  width: 40px;
+  height: 40px;
+  fill: currentColor;
+}
+    a {
+  color: inherit;
+  text-decoration: none;
+}
+    .side-label {
+  position: fixed;
+  left: -20px;
+  top: 20%;
+  transform: translateY(-50%) rotate(270deg);
+  transform-origin: center center;
+  z-index: 50;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray);
+  white-space: nowrap;
+}
+    .side-label span {
+      color: var(--accent);
+      font-weight: 800;
+    }
+    
+    footer {
+  position: relative;
+  z-index: 1;
+  width: 95vw;
+  margin: 0 auto;
+  padding: 20px 0;
+  text-align: right;
+  font-size: 0.6rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+footer span {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeLeft {
+      from { opacity: 0; transform: translateX(-28px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fadeRight {
+      from { opacity: 0; transform: translateX(28px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 700px) {
+      .hero-photo-fullscreen { width: 100%; opacity: 0.25; }
+      .hero-photo-fullscreen::before {
+        background: linear-gradient(to bottom,
+          rgba(8,8,8,0.5) 0%,
+          rgba(8,8,8,0.2) 100%
+        );
+      }
+      .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-photo-spacer { display: none; }
+      .hero-bio { margin-left: auto; margin-right: auto; }
+      .hero-cta { justify-content: center; }
+      .nav-links { gap: 20px; }
+      #contact {
+        height: auto;
+        padding: 16px var(--gap);
+        flex-direction: column;
+        gap: 14px;
+        text-align: center;
+      }
+      .contact-links { gap: 20px; flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- BACKGROUND -->
+<div class="bg-fixed"></div>
+
+<!-- NAVBAR -->
+<nav>
+  <div class ="nav-inner">
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">Experience</a></li>
+    <li><a href="writing.html">Research</a></li>
+    <li><a href="resume.pdf" target="_blank">CV</a></li>
+  </ul>
+  </div>
+</nav>
+
+<!-- PAGE -->
+<div class="page">
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+  <div class="hero-inner">
+
+    <!-- LEFT -->
+    <div class="hero-text">
+      <h1 class="hero-name">
+  <span class="name-first">Freddy</span>
+  <span class="name-last">Sitorus</span>
+</h1>
+     
+    </div>
+    <div class="hero-photo-fullscreen">
+      <img src="picture2.png" alt="Profile photo" onerror="this.style.opacity='0'" />
+    </div>
+ <p class="hero-bio">
+   I'm Fred, an economist and development practitioner from Indonesia with over seven years of experience across the private sector, multilateral institutions, and applied research.
+   <br>In the private sector, I have held senior leadership roles across corporate finance and development projects. On the multilateral side, I have worked with the United Nations Executive Office of the Secretary-General on financing for development, and with the UNDP Regional Bureau for Africa supporting impact evaluation and donor funding project tracking.
+   <br>I bring both quantitative expertise and field research experience, including evaluating a financial inclusion and independence program for female farmers in Kenya.
+   <br>I hold a MPA in Development Economics and Quantitative Analysis, and a BA in Economics and Finance. My interests lie at the intersection of development economics, finance, climate and energy, and public policy.
+      </p>
+  </div>
+    <br>
+    <p class="hero-title">
+      Education
+    </p>
+    <hr>
+    <br>
+ <div class="content-right">
+      <div class="education-grid">
+        <div class="logo">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+
+        <div class="edu-details">
+          <span>Master of Public Administration</span>
+          <p>Economic Development &amp; Quantitative Analysis</p>
+          <p>
+            <a href="https://www.columbia.edu" target="_blank">
+              Columbia University,
+            </a> United States (2025)
+          </p>
+        </div>
+
+        <div class="logo">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+
+        <div class="edu-details">
+          <span>Bachelor of Economics</span>
+          <p>Finance Management</p>
+          <p>
+            <a href="https://usu.ac.id" target="_blank">
+              Universitas Sumatera Utara,
+            </a> Indonesia (2015)
+          </p>        
+        </div>
+      </div>
+    </div>      
+    <p class="hero-title">
+      Experience
+    </p>
+    <hr>
+       <!-- Experience -->
+
+    <div class="content-right">
+      
+      <div class="experience-item">
+        <div class="logo">
+          <img src="telkom.png" alt="Telkom Indonesia" class="exp-logo">
+        </div>
+        <div class="exp-details">
+          <p>
+          <a href="https://telkom.co.id" target="_blank">
+              <span>Telkom Indonesia</span>  
+          </a>
+          </p>
+          <p>Lead of Finance (2020–2023)</p>
+          <p>Lead of Corporate Social Responsibility Program (2020–2023)</p>
+          <p>Head of Branch Area (2020)</p>
+          <p>Strategic Partnership Officer (2017–2020)</p>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="logo">
+          <img src="un.png" alt="United Nations" class="exp-logo">
+        </div>
+        <div class="exp-details">
+          <p>
+            <a href="https://www.un.org/sg/en/global-leadership/entity/secretariat-and-regional-commissions/executive-office-of-the-secretary-general" target="_blank">
+              <span>United Nations</span> – Executive Office of the Secretariat General 
+            </a>
+          </p>
+          <p>Finance and Economic Portfolio Intern (2023)</p>
+        <p>
+         <p>
+            <a href="https://www.undp.org/africa/about-us" target="_blank">
+              <span>United Nations Development Programme</span> – Regional Buerau of Africa 
+            </a>
+          </p>
+          <p>Data and Operation Research (2026)</p>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="logo">
+          <img src="columbia.png" alt="Columbia University" class="exp-logo">
+        </div>
+        <div class="exp-details">
+          <p>
+           <a href="https://barnard.edu" target="_blank">
+             <span>Columbia University</span> - Barnard College
+           </a>  
+          </p>
+          <p>Teaching Fellow for Intro to Economic Reasoning (Fall 2025) and Economic Development (Spring 2026)</p>
+          <p>
+           <a href="https://www.sipa.columbia.edu" target="_blank">
+              <span>Columbia University</span> - School of International and Public Affairs
+           </a>  
+           </p>
+          <p>Teaching Assistant for Microeconomics Analysis (Fall 2024) and Macroeconomic Analysis (Spring 2025)</p>
+         <p>
+        <p>
+           <a href="https://sps.columbia.edu/landing/strategic-communication?utm_campaign=nn-fy2526-scom&utm_source=google&utm_medium=cpc&utm_content=850953&utm_term=&campaign_id=22739094410&gad_source=1&gad_campaignid=22739094410&gbraid=0AAAAAphqpw_KHyOOQPLJAomiYA1_s6XPl&gclid=Cj0KCQjwp7jOBhDGARIsABe7C4cKroyLgoN7ST0N5zPEYW3UM0VKrVf17wcb1pTAXytrZ29SoG5jZm4aAn3OEALw_wcB" target="_blank">
+              <span>Columbia University</span> - School of Professional Studies 
+           </a>  
+          </p>  </p>
+          <p>Teaching Assistant for Finance, Business and Economics (Summer 2025)</p>
+        <br><br><br>
+        </div>
+      </div>
+
+    </div>
+</section>
+
+  <section id="contact">
+  <!-- LEFT: big heading -->
+  <h2 class="contact-heading">Contact Me</h2>
+
+  <!-- RIGHT: details -->
+  <div class="contact-details">
+    <a href="mailto:fs2826@columbia.edu" class="contact-email">fs2826@columbia.edu</a>
+    <div class="contact-socials">
+      <!-- LinkedIn -->
+      <a href="https://linkedin.com/in/freddyhys" target="_blank" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.354V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <!-- Twitter / X -->
+      <a href="https://twitter.com/freddyhys" target="_blank" aria-label="Twitter">
+        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <!-- Medium -->
+      <a href="https://medium.com/@freddysitorus" target="_blank" aria-label="Medium">
+        <svg viewBox="0 0 24 24"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+      </a>
+    </div>
+    <br>
+    <p class="contact-location">📍 Jakarta, Indonesia</p>
+  </div>
+</section>
+  <div class="side-label">Fred Sitorus | <span>Resume</span></div>
+  <footer>
+  <p>© 2026 <span>Freddy Sitorus</span></p>
+</footer>
+<script>
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+</script>
+</body>
+</html>
+```
